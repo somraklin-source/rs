@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>តេស្តគណិតវិទ្យា៖ អាងតេក្រាលកំណត់</title>
+    <style>
+        body {
+            font-family: 'Kantumruy Pro', 'Khmer OS Battambang', sans-serif;
+            background-color: #f4f7f6;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .instruction {
+            background: #e8f6fe;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+            padding: 5px;
+            transition: 0.3s;
+        }
+        .options label:hover {
+            background-color: #f0f0f0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #219150;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none;
+            border-radius: 10px;
+        }
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>វិញ្ញាសាតេស្ត៖ អាងតេក្រាលកំណត់ (ថ្នាក់ទី១២)</h1>
+    
+    <div class="instruction">
+        <strong>ការណែនាំ៖</strong><br>
+        - មានចំនួន ១០ សំណួរ សរុប ២០ ពិន្ទុ។<br>
+        - ឆ្លើយត្រូវទទួលបាន <strong>+២ ពិន្ទុ</strong> | ឆ្លើយខុសត្រូវដក <strong>-១ ពិន្ទុ</strong> | មិនឆ្លើយទទួលបាន <strong>០ ពិន្ទុ</strong>។
+    </div>
+
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>១. គណនា <span class="math">I = &int;<sub>0</sub><sup>1</sup> x<sup>2</sup> dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="correct"> ក. 1/3</label>
+                <label><input type="radio" name="q1" value="wrong"> ខ. 1/2</label>
+                <label><input type="radio" name="q1" value="wrong"> គ. 1</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>២. គណនា <span class="math">I = &int;<sub>1</sub><sup>2</sup> (2x) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="wrong"> ក. 2</label>
+                <label><input type="radio" name="q2" value="correct"> ខ. 3</label>
+                <label><input type="radio" name="q2" value="wrong"> គ. 4</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>៣. គណនា <span class="math">I = &int;<sub>0</sub><sup>&pi;/2</sup> cos(x) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="correct"> ក. 1</label>
+                <label><input type="radio" name="q3" value="wrong"> ខ. 0</label>
+                <label><input type="radio" name="q3" value="wrong"> គ. -1</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>៤. គណនា <span class="math">I = &int;<sub>0</sub><sup>1</sup> e<sup>x</sup> dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="wrong"> ក. e</label>
+                <label><input type="radio" name="q4" value="correct"> ខ. e - 1</label>
+                <label><input type="radio" name="q4" value="wrong"> គ. 1</label>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>៥. គណនា <span class="math">I = &int;<sub>2</sub><sup>3</sup> (1/x) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="wrong"> ក. ln(5)</label>
+                <label><input type="radio" name="q5" value="wrong"> ខ. ln(1)</label>
+                <label><input type="radio" name="q5" value="correct"> គ. ln(3/2)</label>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>៦. គណនា <span class="math">I = &int;<sub>0</sub><sup>1</sup> (4x<sup>3</sup> + 1) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="correct"> ក. 2</label>
+                <label><input type="radio" name="q6" value="wrong"> ខ. 5</label>
+                <label><input type="radio" name="q6" value="wrong"> គ. 4</label>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>៧. គណនា <span class="math">I = &int;<sub>0</sub><sup>&pi;</sup> sin(x) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="wrong"> ក. 0</label>
+                <label><input type="radio" name="q7" value="correct"> ខ. 2</label>
+                <label><input type="radio" name="q7" value="wrong"> គ. 1</label>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>៨. បើ <span class="math">&int;<sub>1</sub><sup>a</sup> 2x dx = 3</span> (ដែល a > 1) រកតម្លៃនៃ a</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="correct"> ក. a = 2</label>
+                <label><input type="radio" name="q8" value="wrong"> ខ. a = 4</label>
+                <label><input type="radio" name="q8" value="wrong"> គ. a = 3</label>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>៩. គណនា <span class="math">I = &int;<sub>0</sub><sup>1</sup> (x+1)<sup>2</sup> dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="wrong"> ក. 8/3</label>
+                <label><input type="radio" name="q9" value="correct"> ខ. 7/3</label>
+                <label><input type="radio" name="q9" value="wrong"> គ. 1</label>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>១០. គណនា <span class="math">I = &int;<sub>0</sub><sup>1</sup> (1 / (x+1)) dx</span></p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="correct"> ក. ln(2)</label>
+                <label><input type="radio" name="q10" value="wrong"> ខ. 1</label>
+                <label><input type="radio" name="q10" value="wrong"> គ. ln(1)</label>
+            </div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">បញ្ជូនចម្លើយ និងពិនិត្យលទ្ធផល</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        let score = 0;
+        let correctCount = 0;
+        let wrongCount = 0;
+        let skippedCount = 0;
+        const totalQuestions = 10;
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            const answer = document.querySelector(`input[name="q${i}"]:checked`);
+            
+            if (answer) {
+                if (answer.value === "correct") {
+                    score += 2;
+                    correctCount++;
+                } else {
+                    score -= 1;
+                    wrongCount++;
+                }
+            } else {
+                score += 0;
+                skippedCount++;
+            }
+        }
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        let color = score >= 10 ? '#27ae60' : '#e74c3c';
+        resultDiv.style.color = 'white';
+        resultDiv.style.backgroundColor = color;
+
+        resultDiv.innerHTML = `
+            លទ្ធផលរបស់អ្នក៖ ${score} / 20 ពិន្ទុ <br>
+            <span style="font-size: 0.6em;">
+                (ត្រូវ: ${correctCount}, ខុស: ${wrongCount}, រំលង: ${skippedCount})
+            </span>
+        `;
+        
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>
